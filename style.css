@@ -1,0 +1,226 @@
+
+/* Общие стили для страницы */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+/* Контейнер для карточек */
+.casino-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.casino-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  justify-content: space-between;
+}
+
+.casino-card .left,
+.casino-card .center,
+.casino-card .right {
+  padding: 16px;
+}
+
+.casino-card .left {
+  background-color: #0f172a;
+  color: white;
+  flex: 1;
+  text-align: center;
+}
+
+.casino-card .position {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.casino-card .logo {
+  max-width: 100%;
+  max-height: 125px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.casino-card .stars {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.casino-card .stars span {
+  color: gold;
+  font-size: 20px;
+}
+
+.casino-card .rating-info {
+  text-align: center;
+  font-size: 14px;
+}
+
+.casino-card .rating-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.casino-card .rating-grid div {
+  background-color: #1e293b;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.casino-card .center {
+  flex: 2;
+}
+
+.casino-card .bonus-block {
+  background-color: #e0f2fe;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.casino-card .center ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.casino-card .right {
+  background-color: #e0f2fe;
+  flex: 1;
+}
+
+.casino-card .right p {
+  font-size: 15px;
+}
+
+.casino-card .buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+}
+
+.casino-card .buttons a {
+  background-color: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.casino-card .buttons a.review {
+  background-color: #c7d2fe;
+  color: #1e3a8a;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .casino-card {
+    width: 100%;
+  }
+
+  .casino-card .left,
+  .casino-card .center,
+  .casino-card .right {
+    padding: 12px;
+  }
+
+  .casino-card .logo {
+    width: 100%;
+    max-height: none;
+  }
+
+  .casino-card .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .casino-card .buttons a {
+    width: 100%;
+  }
+
+  .casino-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Блоки после карточек */
+.text-blocks {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-blocks h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #333;
+}
+
+.text-blocks p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+  padding: 0 15px;
+}
+
+/* Кнопки в блоках */
+.text-blocks .btn {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.text-blocks .btn:hover {
+  background-color: #1d3a8a;
+}
