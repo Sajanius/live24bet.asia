@@ -1,114 +1,157 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2 {
-    color: #1e3a8a;
-}
-
-/* Header Styles */
-header {
-    background-color: #1e3a8a;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-header h1 {
-    font-size: 32px;
-}
-
-/* Casino Cards */
-.casino-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
+/* Общий стиль для карточек казино */
 .casino-card {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    max-width: 300px;
-    margin: 10px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column; /* карточки будут вертикальными */
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+  font-family: sans-serif;
 }
 
-.casino-card .left,
-.casino-card .center,
-.casino-card .right {
-    margin-bottom: 20px;
+/* Левый блок карточки */
+.casino-card .left {
+  background-color: #0f172a;
+  color: white;
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* выравнивание логотипа по центру */
+  justify-content: center;
+  position: relative;
 }
 
 .casino-card .logo {
-    width: 100%;
-    height: auto;
-    max-width: 200px;
-    margin: 0 auto;
+  width: 200px;
+  height: 125px;
+  border-radius: 20px;
+  margin-bottom: 16px;
 }
 
 .casino-card .stars {
-    display: flex;
-    gap: 5px;
-    margin: 10px 0;
+  display: flex;
+  gap: 2px;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.casino-card .rating-info {
+  font-size: 14px;
+}
+
+.casino-card .rating-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.casino-card .rating-grid .rating-item {
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Центральный блок карточки */
+.casino-card .center {
+  flex: 2;
+  padding: 24px;
+}
+
+.casino-card .center h2 {
+  margin-top: 0;
+}
+
+.casino-card .bonus-block {
+  background-color: #e0f2fe;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.casino-card .center ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Правый блок карточки */
+.casino-card .right {
+  background: #e0f2fe;
+  padding: 24px;
+}
+
+.casino-card .right p {
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.casino-card .right ul {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.casino-card .alert {
+  font-size: 15px;
+  color: #000;
+  margin: 12px 0;
+  font-weight: bold;
 }
 
 .casino-card .buttons {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
 }
 
 .casino-card .buttons a {
-    text-align: center;
-    padding: 10px;
-    background-color: #2563eb;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
+  flex: 1 1 120px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .casino-card .buttons .review {
-    background-color: #c7d2fe;
+  background: #c7d2fe;
+  color: #1e3a8a;
 }
 
 .casino-card .buttons .visit {
-    background-color: #2563eb;
+  background: #2563eb;
+  color: white;
 }
 
-/* SEO Text Section */
-.seo-text {
-    background-color: #e0f2fe;
-    padding: 20px;
-    text-align: center;
-}
-
-.seo-text h2 {
-    margin-bottom: 20px;
-}
-
-.seo-text ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.seo-text ul li {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-/* Responsive */
+/* Адаптивность для мобильных */
 @media (max-width: 768px) {
-    .casino-card {
-        width: 100%;
-    }
+  .casino-card {
+    flex-direction: column; /* все карточки становятся вертикальными */
+  }
+
+  .casino-card .left,
+  .casino-card .center,
+  .casino-card .right {
+    flex: 1 1 100%;
+    padding: 16px;
+  }
+
+  .casino-card .logo {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+  }
+
+  .casino-card .buttons a {
+    flex: 1 1 100%;
+  }
 }
