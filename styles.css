@@ -1,101 +1,114 @@
-
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
+h1, h2 {
+    color: #1e3a8a;
 }
 
-h1 {
+/* Header Styles */
+header {
+    background-color: #1e3a8a;
+    color: white;
     text-align: center;
-    font-size: 2em;
-    margin: 20px 0;
+    padding: 40px 20px;
 }
 
+header h1 {
+    font-size: 32px;
+}
+
+/* Casino Cards */
 .casino-cards {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
+    padding: 20px;
 }
 
 .casino-card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
-    padding: 20px;
-    width: 30%;
-    border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
 }
 
-.left img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
+.casino-card .left,
+.casino-card .center,
+.casino-card .right {
+    margin-bottom: 20px;
 }
 
-.stars {
+.casino-card .logo {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.casino-card .stars {
+    display: flex;
+    gap: 5px;
     margin: 10px 0;
 }
 
-.right .visit {
+.casino-card .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.casino-card .buttons a {
+    text-align: center;
+    padding: 10px;
     background-color: #2563eb;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
     border-radius: 8px;
+    text-decoration: none;
 }
 
-.right .visit-referral {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 8px;
+.casino-card .buttons .review {
+    background-color: #c7d2fe;
 }
 
-.info-blocks {
-    margin-top: 40px;
+.casino-card .buttons .visit {
+    background-color: #2563eb;
+}
+
+/* SEO Text Section */
+.seo-text {
+    background-color: #e0f2fe;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
-h2 {
-    font-size: 1.5em;
-    color: #333;
+.seo-text h2 {
+    margin-bottom: 20px;
 }
 
-p {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #666;
+.seo-text ul {
+    list-style-type: none;
+    padding: 0;
 }
 
+.seo-text ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .casino-card {
-        flex-direction: column;
-    }
-
-    .casino-card .left,
-    .casino-card .center,
-    .casino-card .right {
-        flex: 1 1 100%;
-        padding: 16px;
-    }
-
-    .casino-card .logo {
         width: 100%;
-        height: auto;
-    }
-
-    .casino-card .buttons a {
-        flex: 1 1 100%;
     }
 }
