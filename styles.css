@@ -39,6 +39,8 @@ header p {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  padding: 16px;
+  justify-content: space-between;
 }
 
 .casino-card .left,
@@ -184,10 +186,41 @@ header p {
   }
 }
 
-/* Общие стили для кнопок */
-button {
-  padding: 12px;
-  border-radius: 8px;
-  font-weight: 600;
+/* Блоки после карточек */
+.text-blocks {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-blocks h2 {
+  font-size: 28px;
   text-align: center;
+  color: #333;
+}
+
+.text-blocks p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+  padding: 0 15px;
+}
+
+/* Кнопки в блоках */
+.text-blocks .btn {
+  display: inline-block;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.text-blocks .btn:hover {
+  background-color: #1d3a8a;
 }
