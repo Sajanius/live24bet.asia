@@ -1,5 +1,5 @@
-
 User-agent: *
-Disallow: 
+Disallow:
 
-Sitemap: https://sajanius.github.io/live24bet.asia/sitemap.xml
+Sitemap: https://live24bet.asia/sitemap.xml
+
